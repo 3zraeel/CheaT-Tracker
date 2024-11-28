@@ -1,0 +1,135 @@
+/* Fonts */
+@font-face {
+  font-family: 'leet';
+  src: url('./normal.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./vt323.ttf') format('truetype');
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black url('./bg-noise.png') repeat;
+  color: #e00000;
+  font-family: 'VT323', monospace;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url('./line.png');
+}
+
+pre {
+  text-shadow: 0 0 10px #e00000, 0 0 20px #e00000;
+  color: #e00000;
+}
+
+/* Highlight text on selection */
+::selection {
+  background: #e00000;
+  color: black;
+}
+::-moz-selection {
+  background: #e00000;
+}
+
+/* Sections */
+.logo-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo-area-quote {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #00f7ff;
+}
+
+/* Info Section Styling */
+.info-wrapper {
+  text-align: left; /* جعل النصوص على اليسار */
+  margin: 50px auto;
+  width: 100%; /* تحديد عرض مناسب */
+}
+
+.info {
+  font-size: 28px; /* تكبير النصوص */
+  line-height: 2.0; /* تحسين المسافة بين السطور */
+  color: #e6e6e6;
+}
+
+.green {
+  color: #e00000;
+  font-weight: bold; /* تمييز النص */
+}
+
+.white {
+  color: #e6e6e6;
+}
+
+.magenta {
+  color: #d76f30;
+}
+
+.discord-link {
+  font-size: 25px; /* تكبير حجم رابط الديسكورد */
+  text-decoration: underline;
+  color: #d76f30;
+  transition: color 0.3s ease;
+}
+
+.discord-link:hover {
+  color: #ff0000; /* تغيير اللون عند المرور */
+}
+
+/* Download Button */
+.download-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-button {
+  padding: 23px 45px;
+  font-size: 20px;
+  font-family: 'VT323', monospace;
+  color: #ffffff;
+  background: rgba(255, 0, 0, 0.8);
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff0000;
+  transition: 0.3s;
+}
+
+.download-button:hover {
+  background: #ff0000;
+  box-shadow: 0 0 15px #fff;
+}
+
+/* Footer */
+.error {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 5px;
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  background: rgba(80, 80, 80, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 0 0 10px #ff0000;
+}
